@@ -12,7 +12,6 @@ int main ()
 	char msg[MAXSIZE], buffer[msg_len]={0}, occurrences[msg_len]={0};
 
 	// Input sequence of characters
-	cout << "Input a sequence of character values: " << endl;
 	cin.getline(msg, MAXSIZE);
 
 	// Display input message
