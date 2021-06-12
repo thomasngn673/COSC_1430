@@ -71,7 +71,7 @@ int main ()
 	cout << "Number of bits per symbol = " << ceil(log2(num)) << endl;
 
 	// Create histogram
-	cout << "Histogram showing the frequency of the symbols in the alphabet: " << endl;
+	cout << "Histogram showing the frequency of the symbols in the alphabet" << endl;
 	for (i = 0; i < num; i++)
 	{
 		cout << buffer[i] << " | ";
