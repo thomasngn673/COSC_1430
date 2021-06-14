@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <cstring>
 
 using namespace std;
 
@@ -9,7 +8,7 @@ int main ()
 	// Initialize variables
 	const int MAXSIZE = 100;
 	int num=1, bits, msg_len, i, j, k=0, flag=0;
-	char msg[MAXSIZE], buffer[msg_len]={0}, occurrences[msg_len]={0};
+	char msg[MAXSIZE], buffer[MAXSIZE]={0}, occurrences[MAXSIZE]={0};
 
 	// Input sequence of characters
 	cin.getline(msg, MAXSIZE);
@@ -18,7 +17,14 @@ int main ()
 	cout << "Message: " << msg << endl;
 
 	// Specify message length
-	msg_len = strlen(msg);
+	for (i = 0; i < MAXSIZE; i++)
+	{
+		if (msg[i] == '\0')
+		{
+			msg_len = i;
+			break;
+		}
+	}
 
 	// Count unique occurrences
 	for (i = 1; i < msg_len; i++)
