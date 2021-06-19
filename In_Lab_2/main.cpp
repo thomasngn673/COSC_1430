@@ -6,7 +6,7 @@ using namespace std;
 long long int charArraytoInt(char myValue[])
 {
 	long long int total = 0;
-	int i, len;
+	int i=0, len;
 	// Check if input char is negative
 	if (myValue[0] == '-')
 	{
@@ -16,11 +16,15 @@ long long int charArraytoInt(char myValue[])
 	else
 	{
 		// Find length of array
-		while(myValue[i] != '\0')
+		while(1)
 		{
+			if (myValue[i] == '\0')
+			{
+				len = i;
+				break;
+			}
 			i++;
 		}
-		len = i;
 
 		for(i = 0; i < len; ++i)
 		{
