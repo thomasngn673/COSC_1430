@@ -1,6 +1,3 @@
-#ifndef FUNCTIONS_H_
-#define FUNCTIONS_H_
-
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -8,13 +5,6 @@
 #include <vector>
 
 using namespace std;
-
-struct symbol
-{
-    char character;
-    int frequency;
-    string code;
-};
 
 int readFromfile(string filename, string fileContents)
 {
@@ -34,8 +24,15 @@ int readFromfile(string filename, string fileContents)
 
 	else
 	{
+		cout << "file name not found" << endl;
 		return -1;
 	}
 }
 
-#endif
+int main()
+{
+	string filename, filecontents;
+	cin >> filename;
+	readFromfile(filename, filecontents);
+	return 0;
+}
