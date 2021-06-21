@@ -8,21 +8,21 @@ using namespace std;
 
 int main()
 {
-
 	string message, filename;
-	// Define your alphabet variable here. You must use the given symbol structure to create an array or a vector.
+	struct symbol alphabet[10];
+	int arr_len = sizeof(alphabet) / sizeof(alphabet[0]);
 
 	cin >> filename;
-	if(/* Call the readFromFile function here */==0)
+	if(readFromFile(filename, message) == 0)
 	{
-	cout << "Message: " << message << endl;
-	// Call the createAlphabet function here.
-	cout << "Number of symbols in the alphabet = " << /*Use a variable with the alphabet size here*/ << endl;
-	cout << "Characters in the alphabet = ";
-	// Call the printAlphabet function here.
-	cout << "Number of bits per symbol = " << ceil(log2(/*Use a variable with the alphabet size here*/) << endl;
-	// Call the printHistogram function here.
-	// Call the prinCodes function here.
+		cout << "Message: " << message << endl;
+		createAlphabet(message, alphabet);
+/*		cout << "Number of symbols in the alphabet = " << arr_len << endl;
+		cout << "Characters in the alphabet = ";
+		printAlphabet(alphabet, arr_len);
+		cout << "Number of bits per symbol = " << ceil(log2(arr_len)) << endl;
+		printHistogram(alphabet, arr_len);
+		printCodes(alphabet, arr_len); */
 	}
 	else
     	{
@@ -30,3 +30,4 @@ int main()
 	}
 	return 0;
 }
+
