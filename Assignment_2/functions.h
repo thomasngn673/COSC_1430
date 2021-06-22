@@ -28,7 +28,6 @@ int readFromFile(string filename, string &fileContents)
 		{
 			fileContents = line;
 		}
-		cout << "File finished reading" << endl;
 		return 0;
 	}
 	else
@@ -37,32 +36,39 @@ int readFromFile(string filename, string &fileContents)
 	}
 }
 
+int findAlphabetSize(string fileContents)
+{
+	int msg_len = fileContents.size();
+	int uniq_num=1, i, j;
+        // Count unique occurences
+        // Produces: number of unique characters
+        for(i = 1; i < msg_len; i++)
+        {
+                for(j = 0; j < i; j++)
+                {
+                        if(fileContents[i] == fileContents[j])
+                        {
+                                break;
+                        }
+                }
+                if(i == j)
+                {
+                        uniq_num++;
+                }
+        }
+	return uniq_num;
+}
+
 void createAlphabet(string fileContents, struct symbol alphabet[])
 {
         // Find number of characters of message 
         int msg_len = fileContents.size();
 	
-	int i, j, uniq_num=1, k=0, flag=0, bits, occurrences[msg_len], bin_code[msg_len], remainder;
+	int i=0, j=0, k=0, flag=0, remainder;
+	int occurrences[msg_len], bin_code[msg_len];
 	char uniq_char[msg_len];
 	string bin_code_str[msg_len];
 	
-	// Count unique occurences
-	// Produces: number of unique characters
-	for(i = 1; i < msg_len; i++)
-	{
-		for(j = 0; j < i; j++)
-		{
-			if(fileContents[i] == fileContents[j])
-			{
-				break;
-			}
-		}
-		if(i == j)
-		{
-			uniq_num++;
-		}
-	}
-
 	// Create array of unique characters and count occurrences of each unique character
 	// Produces: (1) array containing unique characters, (2) array of occurrences of each unique character
 	for(i = 0; i < msg_len; i++)
@@ -144,6 +150,7 @@ void printAlphabet(struct symbol alphabet[], int arr_len)
 		if(i == (arr_len - 1))
 		{
 			cout << alphabet[i].character << endl;
+			break;
 		}
 		cout << alphabet[i].character << ",";
 	}
