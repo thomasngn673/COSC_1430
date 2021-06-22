@@ -108,10 +108,33 @@ void createAlphabet(string fileContents, struct symbol alphabet[])
 		bin_code[i] = i;
 	}
 
+	// Determine maximum number of bits needed given the amount of uniq characters
+	int bin_len, par1, par2;
+	i = 0;
+	while(1)
+	{
+		par1 = pow(2, i);
+		par2 = pow(2, i+1);
+		cout << "par1 : " << par1 << endl;
+		cout << "par2 : " << par2 << endl;
+		if((k > par1) && (k < par2))
+		{
+			bin_len = i+1;
+			break;
+		}
+		i++;
+	}
+
+	// Initialize bin_code_str
+	bin_code_str[0] = "";
+	for(i = 0; i < bin_len; i++)
+	{
+		bin_code_str[0] = "0" + bin_code_str[0];
+	}
+
 	// Convert array of integers into binary
-	// bin_code_str is an array that contains the binary numbers
-	bin_code_str[0] = "000";
-        for(i= 0; i < k; i++)
+	// bin_code_str is an array that contains the binary number strings
+        for(i = 0; i < k; i++)
         {
                 while(bin_code[i] > 0)
                 {
@@ -123,7 +146,7 @@ void createAlphabet(string fileContents, struct symbol alphabet[])
 
 	int len_bin_code_str = sizeof(bin_code_str)/sizeof(bin_code_str[0]);
 	// Pad array of binary numbers with leading zeros to create fixed length
-	int bin_len=3, bin_incr;
+	int bin_incr;
 	for(i = 0; i < len_bin_code_str; i++)
 	{
 		while((bin_code_str[i]).size() < bin_len)
