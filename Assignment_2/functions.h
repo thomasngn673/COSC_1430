@@ -115,8 +115,6 @@ void createAlphabet(string fileContents, struct symbol alphabet[])
 	{
 		par1 = pow(2, i);
 		par2 = pow(2, i+1);
-		cout << "par1 : " << par1 << endl;
-		cout << "par2 : " << par2 << endl;
 		if((k > par1) && (k < par2))
 		{
 			bin_len = i+1;
