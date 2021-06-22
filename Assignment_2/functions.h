@@ -64,7 +64,7 @@ void createAlphabet(string fileContents, struct symbol alphabet[])
         // Find number of characters of message 
         int msg_len = fileContents.size();
 	
-	int i=0, j=0, k=0, flag=0, remainder;
+	int i, j, k=0, flag=0, remainder;
 	int occurrences[msg_len], bin_code[msg_len];
 	char uniq_char[msg_len];
 	string bin_code_str[msg_len];
