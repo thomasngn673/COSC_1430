@@ -208,7 +208,7 @@ void fixedLengthCoding::printHistogram() const
 void fixedLengthCoding::printCodes() const
 {
 	int i, j;
-        cout << "Fixed-lenght codes of the symbols in the alphabet" << endl;
+        cout << "Fixed-length codes of the symbols in the alphabet" << endl;
         for(i = 0; i < alph_size; i++)
         {
                 cout << mySymbol[i].character << " | " << mySymbol[i].code << endl;
