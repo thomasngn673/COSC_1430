@@ -21,7 +21,6 @@ fixedLengthCoding::~fixedLengthCoding()
 
 string fixedLengthCoding::getMessage() const
 {
-	cout << message << endl;
 	return message;
 }
 
@@ -80,7 +79,10 @@ void fixedLengthCoding::createAlphabet()
         int occurrences[msg_len], bin_code[msg_len];
         char uniq_char[msg_len];
         string bin_code_str[msg_len];
-	
+
+	// Initialize dynamic array (required for using string in struct)
+	mySymbol = new struct symbol[alph_size];
+
 	// (1) array containing unique characters
 	// (2) array of occurrences of each unique character
         for(i = 0; i < msg_len; i++)
@@ -107,8 +109,8 @@ void fixedLengthCoding::createAlphabet()
         {
                 mySymbol[i].character = uniq_char[i];
         }
-
-        // Assign array of occurrences to 'frequency' data member in struct
+        
+	// Assign array of occurrences to 'frequency' data member in struct
         for(i = 0; i < k; i++)
         {
                 mySymbol[i].frequency = occurrences[i];
@@ -168,15 +170,47 @@ void fixedLengthCoding::createAlphabet()
         }
 
         // Assign binary codes array to 'code' data member in struct
-        for(i = 0; i < k; i++)
+	for(i = 0; i < k; i++)
         {
                 mySymbol[i].code = bin_code_str[i];
         }
+}
 
-        for(i = 0; i < k; i++)
+void fixedLengthCoding::printAlphabet() const
+{
+	int i;
+        for(i = 0; i < alph_size; i++)
         {
-                cout << "char: " << mySymbol[i].character << endl;
-		cout << "freq: " << mySymbol[i].frequency << endl;
-		cout << "bin code: " << mySymbol[i].code << endl;
+                if(i == (alph_size - 1))
+                {
+                        cout << mySymbol[i].character << endl;
+                        break;
+                }
+                cout << mySymbol[i].character << ",";
+        }
+}
+
+void fixedLengthCoding::printHistogram() const
+{
+	int i, j;
+        cout << "Histogram showing the frequency of the symbols in the alphabet" << endl;
+        for (i = 0; i < alph_size; i++)
+        {
+                cout << mySymbol[i].character << " | ";
+                for (j = 0; j < mySymbol[i].frequency; j++)
+                {
+                        cout << '*';
+                }
+                cout << endl;
+        }
+}
+
+void fixedLengthCoding::printCodes() const
+{
+	int i, j;
+        cout << "Fixed-lenght codes of the symbols in the alphabet" << endl;
+        for(i = 0; i < alph_size; i++)
+        {
+                cout << mySymbol[i].character << " | " << mySymbol[i].code << endl;
         }
 }
