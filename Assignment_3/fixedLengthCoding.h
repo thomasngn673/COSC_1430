@@ -1,6 +1,10 @@
-// Add the include guard
+#ifndef FIXEDLENGTHCODING_H
+#define FIXEDLENGTHCODING_H
 
-// Add the libraries needed by your solution
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 struct symbol
 {
@@ -9,7 +13,22 @@ struct symbol
     string code;
 };
 
+class fixedLengthCoding
+{
+	private:
+		string message = "";
+		int alph_size = 0;
+		struct symbol *mySymbol = nullptr;
+	public:
+		fixedLengthCoding();			// constructor
+		~fixedLengthCoding();			// destructor
+		string getMessage() const;		// getMessage
+		int getAlphabetSize() const;		// getAlphabetSize
+		int readFromFile(const string &); 	// readFromFile
+		void createAlphabet();			// createAlphabet
+		void printAlphabet() const;		// printAlphabet
+		void printHistogram() const;		// printHistogram
+		void printCodes() const;		// printCodes
+};
 
-// Write the definition of the fixedLengthCoding class
-
-
+#endif
