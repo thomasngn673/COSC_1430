@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "fixedLengthCoding.h"
 #include "fixedLengthCoding.cpp"
 
