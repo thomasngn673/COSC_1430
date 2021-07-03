@@ -1,9 +1,9 @@
-/* Write the implementation of the ElectronicsStoreInventory class here */
-#include "ElectronicsStoreInventory.h"
+/* Write the implementation of the ElectronicStoreInventory class here */
+#include "ElectronicStoreInventory.h"
 #include "Printer.h"
 #include "Computer.h"
 
-ElectronicsStoreInventory::ElectronicsStoreInventory()
+ElectronicStoreInventory::ElectronicStoreInventory()
 {
 	size = MAX_SIZE;
 	count = 0;
@@ -13,7 +13,7 @@ ElectronicsStoreInventory::ElectronicsStoreInventory()
 	}
 }
 
-ElectronicsStoreInventory::ElectronicsStoreInventory(const ElectronicsStoreInventory & objToCopy)
+ElectronicStoreInventory::ElectronicStoreInventory(const ElectronicStoreInventory & objToCopy)
 {
     size = objToCopy.size;
     count = objToCopy.count;
@@ -36,7 +36,7 @@ ElectronicsStoreInventory::ElectronicsStoreInventory(const ElectronicsStoreInven
         }
 }
 
-const ElectronicsStoreInventory & ElectronicsStoreInventory::operator = (const ElectronicsStoreInventory & RHS)
+const ElectronicStoreInventory & ElectronicStoreInventory::operator = (const ElectronicStoreInventory & RHS)
 {
     if (this != &RHS)
     {
@@ -64,7 +64,7 @@ const ElectronicsStoreInventory & ElectronicsStoreInventory::operator = (const E
 }
 
 // Write the implementation of the addDevice function here. You can use the code provided on the copy constructor if needed.
-bool ElectronicsStoreInventory::addDevice(const GenericDevice & _device)
+bool ElectronicStoreInventory::addDevice(const GenericDevice & _device)
 {
 	if(size == count)	// Amount of devices is exceeding inventory capacity, return false
 	{
@@ -86,7 +86,7 @@ bool ElectronicsStoreInventory::addDevice(const GenericDevice & _device)
 }
 
 // Write the implementation of the removeDevice function here. 
-bool ElectronicsStoreInventory::removeDevice(const std::string & _serialNumber)
+bool ElectronicStoreInventory::removeDevice(const std::string & _serialNumber)
 {
 	// Check if serialNumber is in inventory
 	
@@ -118,7 +118,7 @@ bool ElectronicsStoreInventory::removeDevice(const std::string & _serialNumber)
 }
 
 // Write the implementation of the print function here.
-void ElectronicsStoreInventory::print() const
+void ElectronicStoreInventory::print() const
 {
 	for(int i = 0; i < count; i++)
 	{
@@ -127,7 +127,7 @@ void ElectronicsStoreInventory::print() const
 }
 
 // Write the implementation of the summary function here.
-void ElectronicsStoreInventory::summary() const
+void ElectronicStoreInventory::summary() const
 {
 	int compCount=0, printCount=0;
 
@@ -146,7 +146,7 @@ void ElectronicsStoreInventory::summary() const
 	std::cout << "Total number of printer in the store = " << printCount << std::endl;
 }
 
-ElectronicsStoreInventory::~ElectronicsStoreInventory()
+ElectronicStoreInventory::~ElectronicStoreInventory()
 {
     int _count = 0;
     int i = 0;

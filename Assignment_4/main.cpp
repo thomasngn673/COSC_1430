@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Computer.h"
-#include "ElectronicsStoreInventory.h"
+#include "ElectronicStoreInventory.h"
 #include "GenericDevice.h"
 #include "Printer.h"
 
 #include "Computer.cpp"
-#include "ElectronicsStoreInventory.cpp"
+#include "ElectronicStoreInventory.cpp"
 #include "GenericDevice.cpp"
 #include "Printer.cpp"
 
@@ -19,7 +19,7 @@ int main()
 	Printer P1(10,"YES","BROTHER","Laser Printer","654321");
 	Printer P2(11,"NO","HP","Inject Printer","654322");
 		
-	ElectronicsStoreInventory myStore; // Declare class
+	ElectronicStoreInventory myStore; // Declare class
 	
 	myStore.addDevice(C1);
 	myStore.addDevice(P1);
