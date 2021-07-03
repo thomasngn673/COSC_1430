@@ -1,7 +1,7 @@
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
-class Computer // Use inheritance and the virtual qualifier when needed
+class Computer: public GenericDevice // Use inheritance and the virtual qualifier when needed
 {
     private:
         std::string cpu;

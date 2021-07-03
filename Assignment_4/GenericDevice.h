@@ -13,10 +13,10 @@ class GenericDevice     // use the virtual qualifier when needed
         std::string serialNumber;
     public:
         GenericDevice(const std::string & _manufacturer, const std::string & _description, const std::string & _serialNumber);
-        std::string getManufacturer() const;
-        std::string getDescription() const;
-        std::string getSerialNumber() const;
-        std::string getType() const;
+        virtual std::string getManufacturer() const;
+        virtual std::string getDescription() const;
+        virtual std::string getSerialNumber() const;
+        virtual std::string getType() const;
         void print() const;
         ~GenericDevice(){}
 };

@@ -1,6 +1,21 @@
-Printer(const int _ppm, const std::string & _color, const std::string & _manufacturer, const std::string & _description, const std::string & _serialNumber);
-        void print() const 
+#include "Printer.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+Printer::Printer(const int _ppm, const string & _color, const string & _manufacturer, const string & _description, const string & _serialNumber):GenericDevice(_manufacturer, _description, _serialNumber)
 {
-	std::cout << "Printer: PPM = " << /* ppm identifier */ << ", Color Printer = " << /* color identifier */ << ", Manufacturer = " << /* Manufacturer identifier */ << ", Description = " << /* Description identifier */ << ", SN = " << /* SerialNumber identifier */ << std::endl;
+	ppm = _ppm;
+	color = _color;
 }
-        std::string getType() const;
+
+void Printer::print() const 
+{
+	cout << "Printer: PPM = " << ppm << ", Color Printer = " << color << ", Manufacturer = " << getManufacturer() << ", Description = " << getDescription() << ", SN = " << getSerialNumber() << endl;
+}
+
+string Printer::getType() const;
+{
+
+}

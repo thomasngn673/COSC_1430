@@ -1,7 +1,7 @@
 #ifndef PRINTER_H
 #define PRINTER_H
 
-class Printer // Use inheritance and the virtual qualifier when needed
+class Printer: public GenericDevice // Use inheritance and the virtual qualifier when needed
 {
     private:
         int ppm;

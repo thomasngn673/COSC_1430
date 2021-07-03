@@ -1,19 +1,27 @@
 #include <iostream>
+#include <string>
+#include "Computer.h"
 
 using namespace std;
 
-Computer::Computer(const std::string & _cpu, const std::string & _diskType, const int _diskSizeGB, const int _memSizeGB, const std::string & _manufacturer, const std::string & _description, const std::string & _serialNumber)
+Computer::Computer(const string & _cpu, const string & _diskType, const int _diskSizeGB, const int _memSizeGB, const string & _manufacturer, const string & _description, const string & _serialNumber):GenericDevice(_manufacturer, _description, _serialNumber)
 {
+	// Computer private members
+	cpu = _cpu;
+	diskType = _diskType;
+	diskSizeGB = _diskSizeGB;
+	memSizeGB = _memSizeGB;
 
+	// Accessing GenericDevice private members by calling GenericDevice overloaded constructor
 }
 
 void Computer::print() const
 {
-std::cout << "Computer: CPU = " << /* cpu identifier */ << ", Disk type = " << /* diskType identifier */ << ", Disk size (GB) = " << /* diskSizeGB identifier */ << ", Manufacturer = " << /* Manufacturer identifier */ << ", Description = " << /* Description identifier */ << ", SN = " << /* SerialNumber identifier */ << std::endl;	
+	cout << "Computer: CPU = " << cpu << ", Disk type = " << diskType << ", Disk size (GB) = " << diskSizeGB << ", Manufacturer = " << getManufacturer() << ", Description = " << getDescription() << ", SN = " <<  getSerialNumber() << endl;	
 }
 
 string Computer::getType() const
 {
-
+	
 }
 
