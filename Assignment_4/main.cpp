@@ -3,6 +3,7 @@
 #include "ElectronicsStoreInventory.h"
 #include "GenericDevice.h"
 #include "Printer.h"
+
 #include "Computer.cpp"
 #include "ElectronicsStoreInventory.cpp"
 #include "GenericDevice.cpp"
@@ -18,19 +19,17 @@ int main()
 	Printer P1(10,"YES","BROTHER","Laser Printer","654321");
 	Printer P2(11,"NO","HP","Inject Printer","654322");
 		
-	C1.print();
-		
-//	ElectronicStoreInventory myStore; // Declare class
+	ElectronicsStoreInventory myStore; // Declare class
 	
-//	myStore.addDevice(C1);
-//	myStore.addDevice(P1);
-//	myStore.addDevice(C2);
-//	myStore.addDevice(C3);
-//	myStore.addDevice(P2);
+	myStore.addDevice(C1);
+	myStore.addDevice(P1);
+	myStore.addDevice(C2);
+	myStore.addDevice(C3);
+	myStore.addDevice(P2);
 
-//	myStore.removeDevice("123458");
-//	myStore.print();
-//	myStore.summary();
+	myStore.removeDevice("123458");
+	myStore.print();
+	myStore.summary();
 	
 	return 0;
 }

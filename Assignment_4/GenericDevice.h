@@ -4,18 +4,20 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class GenericDevice     // use the virtual qualifier when needed
 {
     private:
-        std::string manufacturer;
-        std::string description;
-        std::string serialNumber;
+        string manufacturer;
+        string description;
+        string serialNumber;
     public:
-        GenericDevice(const std::string & _manufacturer, const std::string & _description, const std::string & _serialNumber);
-        virtual std::string getManufacturer() const;
-        virtual std::string getDescription() const;
-        virtual std::string getSerialNumber() const;
-        virtual std::string getType() const;
+        GenericDevice(const string & _manufacturer, const string & _description, const string & _serialNumber);
+        string getManufacturer() const;
+        string getDescription() const;
+        string getSerialNumber() const;
+        virtual string getType() const;
         virtual void print() const;
         ~GenericDevice(){}
 };

@@ -2,6 +2,8 @@
 #define ELECTRONICSSTOREINVENTORY_H
 
 #include "GenericDevice.h"
+#include "Printer.h"
+#include "Computer.h"
 
 const int MAX_SIZE=100;
 

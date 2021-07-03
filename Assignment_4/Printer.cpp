@@ -15,7 +15,7 @@ void Printer::print() const
 	cout << "Printer: PPM = " << ppm << ", Color Printer = " << color << ", Manufacturer = " << getManufacturer() << ", Description = " << getDescription() << ", SN = " << getSerialNumber() << endl;
 }
 
-string Printer::getType() const;
+string Printer::getType() const
 {
 	return "Printer";
 }

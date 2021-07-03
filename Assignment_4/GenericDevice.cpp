@@ -27,19 +27,11 @@ string GenericDevice::getSerialNumber() const
 }
 
 string GenericDevice::getType() const
-{
-
+{	
+	return "Other";
 }
 
 void GenericDevice::print() const
 {
 	cout << "Manufacturer: " << manufacturer << ", Description: " << description << ", Type: Other:" << endl;
 }
-
-GenericDevice::~GenericDevice()
-{
-	manufacturer = 0;
-	description = 0;
-	serialNumber = 0;
-}
-

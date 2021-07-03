@@ -6,7 +6,6 @@ using namespace std;
 
 Computer::Computer(const string & _cpu, const string & _diskType, const int _diskSizeGB, const int _memSizeGB, const string & _manufacturer, const string & _description, const string & _serialNumber):GenericDevice(_manufacturer, _description, _serialNumber)
 {
-	// Computer private members
 	cpu = _cpu;
 	diskType = _diskType;
 	diskSizeGB = _diskSizeGB;
