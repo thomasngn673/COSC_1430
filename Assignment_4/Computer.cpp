@@ -9,7 +9,7 @@ Computer::Computer(const std::string & _cpu, const std::string & _diskType, cons
 
 void Computer::print() const
 {
-	
+std::cout << "Computer: CPU = " << /* cpu identifier */ << ", Disk type = " << /* diskType identifier */ << ", Disk size (GB) = " << /* diskSizeGB identifier */ << ", Manufacturer = " << /* Manufacturer identifier */ << ", Description = " << /* Description identifier */ << ", SN = " << /* SerialNumber identifier */ << std::endl;	
 }
 
 string Computer::getType() const
