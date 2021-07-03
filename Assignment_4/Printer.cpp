@@ -17,5 +17,5 @@ void Printer::print() const
 
 string Printer::getType() const;
 {
-
+	return "Printer";
 }

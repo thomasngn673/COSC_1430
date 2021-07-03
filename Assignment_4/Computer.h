@@ -1,6 +1,9 @@
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
+#include "GenericDevice.h"
+#include <string.h>
+
 class Computer: public GenericDevice // Use inheritance and the virtual qualifier when needed
 {
     private:

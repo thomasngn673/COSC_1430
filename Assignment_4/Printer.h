@@ -1,6 +1,9 @@
 #ifndef PRINTER_H
 #define PRINTER_H
 
+#include "GenericDevice.h"
+#include <string>
+
 class Printer: public GenericDevice // Use inheritance and the virtual qualifier when needed
 {
     private:

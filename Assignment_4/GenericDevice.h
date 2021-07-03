@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 
-
 class GenericDevice     // use the virtual qualifier when needed
 {
     private:
@@ -17,7 +16,7 @@ class GenericDevice     // use the virtual qualifier when needed
         virtual std::string getDescription() const;
         virtual std::string getSerialNumber() const;
         virtual std::string getType() const;
-        void print() const;
+        virtual void print() const;
         ~GenericDevice(){}
 };
 

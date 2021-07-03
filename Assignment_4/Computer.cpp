@@ -11,8 +11,6 @@ Computer::Computer(const string & _cpu, const string & _diskType, const int _dis
 	diskType = _diskType;
 	diskSizeGB = _diskSizeGB;
 	memSizeGB = _memSizeGB;
-
-	// Accessing GenericDevice private members by calling GenericDevice overloaded constructor
 }
 
 void Computer::print() const
@@ -22,6 +20,6 @@ void Computer::print() const
 
 string Computer::getType() const
 {
-	
+	return "Computer";	
 }
 

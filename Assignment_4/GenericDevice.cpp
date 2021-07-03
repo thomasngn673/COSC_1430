@@ -1,4 +1,4 @@
-#include "GenericDevice.cpp"
+#include "GenericDevice.h"
 #include <iostream>
 #include <string>
 
@@ -38,6 +38,8 @@ void GenericDevice::print() const
 
 GenericDevice::~GenericDevice()
 {
-
+	manufacturer = 0;
+	description = 0;
+	serialNumber = 0;
 }
 
