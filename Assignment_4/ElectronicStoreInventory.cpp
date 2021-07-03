@@ -67,6 +67,8 @@ const ElectronicStoreInventory & ElectronicStoreInventory::operator = (const Ele
 // Write the implementation of the removeDevice function here. 
 
 // Write the implementation of the print function here. 
+std::cout << "Total number of computers in the store = " << /* Number of Computers identifier */ << std::endl;
+std::cout << "Total number of printer in the store = " << /* Number of Printers identifier */ << std::endl;
 
 // Write the implementation of the summary function here. 
 
