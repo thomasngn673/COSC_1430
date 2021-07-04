@@ -17,7 +17,7 @@ class GenericDevice     // use the virtual qualifier when needed
         string getManufacturer() const;
         string getDescription() const;
         string getSerialNumber() const;
-        virtual string getType() const;
+        virtual string getType() const;	// 'pure virtual class' allows 'Computer' and 'Printer' to overwrite the virtual function
         virtual void print() const;
         ~GenericDevice(){}
 };

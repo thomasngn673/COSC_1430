@@ -14,7 +14,7 @@ class Computer: public GenericDevice // Use inheritance and the virtual qualifie
     public:
         Computer(const std::string & _cpu, const std::string & _diskType, const int _diskSizeGB, const int _memSizeGB, const std::string & _manufacturer, const std::string & _description, const std::string & _serialNumber);
         void print() const;
-        std::string getType() const override;
+        std::string getType() const;
 };
 
 #endif
