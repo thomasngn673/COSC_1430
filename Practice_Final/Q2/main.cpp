@@ -1,4 +1,5 @@
 #include "Student1430.h"
+#include <iostream>
 
 class FileNotFoundException {};
 
@@ -15,13 +16,22 @@ int main(int argc, char**argv)
    ifstream infile(argv[1]);
    
    // Define the try and cath blocks here
-   
-      if(!infile)
-         throw FileNotFoundException();
-         
-
-      cout << "File not found.\n";
-      return -1;
+   try
+   {
+	   if(!infile)
+	   {
+		   throw FileNotFoundException();
+	   }
+	   else
+	   {
+		   infile.open(argv[1]);
+	   }
+   }
+   catch (...)
+   {
+	   cout << "File not found.\n";
+	   return -1;
+   }
   
    
    while(!infile.eof())
