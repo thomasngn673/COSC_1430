@@ -10,7 +10,7 @@ using namespace std;
 class Point // use the virtual qualifier when needed
 {
    public:
-      int getDimension() const = 0;
+      virtual int getDimension() const = 0;
 };
 
 #endif

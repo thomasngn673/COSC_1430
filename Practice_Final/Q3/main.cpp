@@ -1,15 +1,22 @@
 #include "point1d.h"
 #include "point2d.h"
 #include "point3d.h"
+#include <iostream>
+
+using namespace std;
 
 void read(Point* points[], int n) 
 {
-
+	for(int i = 0; i < n; i++)
+	{
+		cin >> 
 }
 
 void print(Point* points[], int n)
 {
-
+	cout << "#1D = " << pointsPtr[n].getX();
+	cout << ", #2D = " << pointsPtr[n].getY();
+	cout << ", #3D = " << pointsPtr[n].getZ();
 }
 
 // Do not modify the main function
@@ -27,10 +34,10 @@ int main(int argc, char **argv)
         }
         case '2':
         {
-            Point* points[4];
-            read(points,4);
-            print(points,4);
-            break;
+		Point* points[4];
+		read(points,4);
+		print(points,4);
+		break;
         }
     }
     return 0;

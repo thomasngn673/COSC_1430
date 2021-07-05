@@ -6,9 +6,9 @@
 class Point1D : public Point // use the virtual qualifier when needed
 {
    public:
-      int getDimension() const {/*write your implementation here*/};
-      int getX() const {/*write your implementation here*/}
-      void setX(int x) {/*write your implementation here*/}
+      virtual int getDimension() const {return 1;};
+      int getX() const {return (double)x;}
+      void setX(int _x) {x = _x;}
    private:
       double x = 0;
 };
