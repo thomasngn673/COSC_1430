@@ -6,7 +6,8 @@
 using namespace std;
 
 void read(Point* points[], int n) 
-{
+{	
+	string x
 	for(int i = 0; i < n; i++)
 	{
 		cin >> 
