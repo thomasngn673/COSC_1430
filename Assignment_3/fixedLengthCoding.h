@@ -17,9 +17,9 @@ struct symbol
 class fixedLengthCoding
 {
 	private:
-		string message = "";
-		int alph_size = 0;
-		struct symbol *mySymbol = nullptr;
+		string message;
+		int alph_size;
+		struct symbol *mySymbol;
 	public:
 		fixedLengthCoding();			// constructor
 		~fixedLengthCoding();			// destructor
